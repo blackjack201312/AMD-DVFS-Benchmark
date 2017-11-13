@@ -36,22 +36,22 @@ print memory_frequencies
 # open GPU monitor
 # os.system('start nvidiaInspector.exe -showMonitoring')
 
-# reset GPU first
-command = 'nvidiaInspector.exe -forcepstate:%s,16' % nvIns_dev_id
-print command
-os.system(command)
-time.sleep(rest_int)
+# # reset GPU first
+# command = 'nvidiaInspector.exe -forcepstate:%s,16' % nvIns_dev_id
+# print command
+# os.system(command)
+# time.sleep(rest_int)
 
 for core_f in core_frequencies:
     for mem_f in memory_frequencies:
 
-        # set specific frequency
-        command = 'nvidiaInspector.exe -forcepstate:%s,5 -setMemoryClock:%s,1,%s -setGpuClock:%s,1,%s' \
-                        % (nvIns_dev_id, nvIns_dev_id, mem_f, nvIns_dev_id, core_f)
+        # # set specific frequency
+        # command = 'nvidiaInspector.exe -forcepstate:%s,5 -setMemoryClock:%s,1,%s -setGpuClock:%s,1,%s' \
+        #                 % (nvIns_dev_id, nvIns_dev_id, mem_f, nvIns_dev_id, core_f)
         
-        print command
-        os.system(command)
-        time.sleep(rest_int)
+        # print command
+        # os.system(command)
+        # time.sleep(rest_int)
 
         for app in benchmark_programs:
 
@@ -67,56 +67,56 @@ for core_f in core_frequencies:
                 metricslog = 'benchmark_%s_core%d_mem%d_input%02d_metrics.log' % (app, core_f, mem_f, argNo)
 
 
-                # # start record power data
-                # os.system("echo \"arg:%s\" >> %s/%s" % (arg, LOG_ROOT, powerlog))
-                # command = 'start /B nvml_samples.exe -device=%d -output=%s/%s > nul' % (nvIns_dev_id, LOG_ROOT, powerlog)
-                # print command
-                # os.system(command)
-                # time.sleep(rest_int)
+                # start record power data
+                os.system("echo \"arg:%s\" >> %s/%s" % (arg, LOG_ROOT, powerlog))
+                command = 'start /B CodeXLPowerProfiler.exe -e all -T %d -d 1000 -o %s/%s -F txt > nul' % (pw_sample_int, LOG_ROOT, powerlog)
+                print command
+                os.system(command)
+                time.sleep(rest_int)
 
-                # # execute program to collect power data
-                # os.system("echo \"arg:%s\" >> %s/%s" % (arg, LOG_ROOT, perflog))
+                # execute program to collect power data
+                os.system("echo \"arg:%s\" >> %s/%s" % (arg, LOG_ROOT, perflog))
                 # command = '%s\\%s %s -device=%d -secs=%d >> %s/%s' % (APP_ROOT, app, arg, cuda_dev_id, running_time, LOG_ROOT, perflog)
+                command = '%s\\%s %s >> %s/%s' % (APP_ROOT, app, arg, LOG_ROOT, perflog)
+                print command
+                os.system(command)
+                time.sleep(rest_int)
+
+                # stop record power data
+                os.system('tasklist|findstr "CodeXLPowerProfiler.exe" && taskkill /F /IM CodeXLPowerProfiler.exe')
+
+                # # execute program to collect time data
+                # # arg, number = re.subn('-iters=[0-9]*', '-iters=10', arg)
+                # command = 'nvprof --profile-child-processes %s/%s %s -device=%d -iters=5 >> %s/%s 2>&1' % (APP_ROOT, app, arg, cuda_dev_id, LOG_ROOT, perflog)
                 # print command
                 # os.system(command)
                 # time.sleep(rest_int)
 
-                # # stop record power data
-                # os.system('tasklist|findstr "nvml_samples.exe" && taskkill /F /IM nvml_samples.exe')
+                # # collect grid and block settings
+                # command = 'nvprof --print-gpu-trace --profile-child-processes %s/%s %s -device=%d -iters=15 >> %s/%s 2>&1' % (APP_ROOT, app, arg, cuda_dev_id, LOG_ROOT, metricslog)
+                # print command
+                # os.system(command)
+                # time.sleep(rest_int)
 
+                # # execute program to collect metrics data
+                # metCount = 0
 
-                # execute program to collect time data
-                # arg, number = re.subn('-iters=[0-9]*', '-iters=10', arg)
-                command = 'nvprof --profile-child-processes %s/%s %s -device=%d -iters=5 >> %s/%s 2>&1' % (APP_ROOT, app, arg, cuda_dev_id, LOG_ROOT, perflog)
-                print command
-                os.system(command)
-                time.sleep(rest_int)
+                # # to be fixed, the stride should be a multiplier of the metric number
+                # while metCount < len(metrics):
 
-                # collect grid and block settings
-                command = 'nvprof --print-gpu-trace --profile-child-processes %s/%s %s -device=%d -iters=15 >> %s/%s 2>&1' % (APP_ROOT, app, arg, cuda_dev_id, LOG_ROOT, metricslog)
-                print command
-                os.system(command)
-                time.sleep(rest_int)
+                #     if metCount + 3 > len(metrics):
+                #         metStr = ','.join(metrics[metCount:])
+                #     else:
+                #         metStr = ','.join(metrics[metCount:metCount + 3])
+                #     command = 'nvprof --devices %s --metrics %s %s/%s %s -device=%d -iters=15 >> %s/%s 2>&1' % (cuda_dev_id, metStr, APP_ROOT, app, arg, cuda_dev_id, LOG_ROOT, metricslog)
+                #     print command
+                #     os.system(command)
+                #     time.sleep(rest_int)
+                #     metCount += 3
 
-                # execute program to collect metrics data
-                metCount = 0
-
-                # to be fixed, the stride should be a multiplier of the metric number
-                while metCount < len(metrics):
-
-                    if metCount + 3 > len(metrics):
-                        metStr = ','.join(metrics[metCount:])
-                    else:
-                        metStr = ','.join(metrics[metCount:metCount + 3])
-                    command = 'nvprof --devices %s --metrics %s %s/%s %s -device=%d -iters=15 >> %s/%s 2>&1' % (cuda_dev_id, metStr, APP_ROOT, app, arg, cuda_dev_id, LOG_ROOT, metricslog)
-                    print command
-                    os.system(command)
-                    time.sleep(rest_int)
-                    metCount += 3
-
-# reset GPU first
-command = 'nvidiaInspector.exe -forcepstate:%s,16' % nvIns_dev_id
-print command
-os.system(command)
-time.sleep(rest_int)
-os.system('pause')
+# # reset GPU first
+# command = 'nvidiaInspector.exe -forcepstate:%s,16' % nvIns_dev_id
+# print command
+# os.system(command)
+# time.sleep(rest_int)
+# os.system('pause')
