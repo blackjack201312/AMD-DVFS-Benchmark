@@ -1,0 +1,24 @@
+#ProfileFileVersion=5.2
+#ProfilerVersion=5.2.6612
+#API=OpenCL
+#Application=C:/Users/hpcl/Desktop/DVFS/AMD-DVFS-Benchmark/test/MatrixMultiplication.exe
+#ApplicationArgs=--device gpu
+#WorkingDirectory=./
+#Device Ellesmere Platform Vendor=Advanced Micro Devices, Inc.
+#Device Ellesmere Platform Name=AMD Accelerated Parallel Processing
+#Device Ellesmere Platform Version=OpenCL 2.1 AMD-APP (2527.7)
+#Device Ellesmere CLDriver Version=2527.7
+#Device Ellesmere CLRuntime Version=OpenCL 2.0 AMD-APP (2527.7)
+#Device Ellesmere NumberAppAddressBits=64
+#Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz Platform Vendor=Advanced Micro Devices, Inc.
+#Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz Platform Name=AMD Accelerated Parallel Processing
+#Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz Platform Version=OpenCL 2.1 AMD-APP (2527.7)
+#Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz CLDriver Version=2527.7 (sse2)
+#Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz CLRuntime Version=OpenCL 1.2 AMD-APP (2527.7)
+#Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz NumberAppAddressBits=64
+#OS Version=Windows 7 Build 6.1.7601
+#DisplayName=
+#ListSeparator=,
+#ForceSinglePass=False
+Method, ExecutionOrder, ThreadID, CallIndex, GlobalWorkSize, WorkGroupSize, Time, LocalMemSize, VGPRs, SGPRs, ScratchRegs, Wavefronts, VALUInsts, SALUInsts, VFetchInsts, SFetchInsts, VWriteInsts, FlatVMemInsts, LDSInsts, FlatLDSInsts, GDSInsts, VALUUtilization, VALUBusy, SALUBusy, FetchSize, WriteSize, CacheHit, MemUnitBusy, MemUnitStalled, WriteUnitStalled, LDSBankConflict
+mmmKernel__k1_Ellesmere1, 1, 29992, 119, {     16      16       1}, {    8     8     1},         0.02624, 0, 75, 15, 0,         4.00,      2004.00,       109.00,         0.00,         5.00,         0.00,       132.00,         0.00,         0.00,         0.00,       100.00,         0.93,         0.14,        33.31,        16.00,        42.16,         2.17,         0.01,         0.00,         0.00

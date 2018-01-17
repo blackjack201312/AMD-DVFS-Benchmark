@@ -1,0 +1,311 @@
+TraceFileVersion=3.2
+ProfilerVersion=5.2.6612
+Application=C:\Users\hpcl\Desktop\DVFS\AMD-DVFS-Benchmark\test\MatrixMultiplication.exe
+ApplicationArgs=--device gpu
+WorkingDirectory=./
+UserTimer=False
+OS Version=Windows 7 Build 6.1.7601
+DisplayName=
+CLExcludedAPIs=
+Device Ellesmere Platform Vendor = Advanced Micro Devices, Inc.
+Device Ellesmere Platform Name = AMD Accelerated Parallel Processing
+Device Ellesmere Platform Version = OpenCL 2.1 AMD-APP (2527.7)
+Device Ellesmere CLDriver Version = 2527.7
+Device Ellesmere CLRuntime Version = OpenCL 2.0 AMD-APP (2527.7)
+Device Ellesmere NumberAppAddressBits = 64
+Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz Platform Vendor = Advanced Micro Devices, Inc.
+Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz Platform Name = AMD Accelerated Parallel Processing
+Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz Platform Version = OpenCL 2.1 AMD-APP (2527.7)
+Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz CLDriver Version = 2527.7 (sse2)
+Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz CLRuntime Version = OpenCL 1.2 AMD-APP (2527.7)
+Device Intel(R) Core(TM) i7 CPU         920  @ 2.67GHz NumberAppAddressBits = 64
+=====ocl API Trace Output=====
+31016
+142
+CL_SUCCESS = clGetPlatformInfo ( 0x000007FEEB3D4AB0;CL_PLATFORM_ICD_SUFFIX_KHR;0;NULL;[4] )
+CL_SUCCESS = clGetPlatformInfo ( 0x000007FEEB3D4AB0;CL_PLATFORM_ICD_SUFFIX_KHR;4;["AMD"];NULL )
+CL_SUCCESS = clGetPlatformInfo ( 0x000007FEEB3D4AB0;CL_PLATFORM_VENDOR;100;["Advanced Micro Devices, Inc."];NULL )
+CL_SUCCESS = clGetPlatformInfo ( 0x000007FEEB3D4AB0;CL_PLATFORM_VENDOR;100;["Advanced Micro Devices, Inc."];NULL )
+0x00000000003CCF10 = clCreateContextFromType ( [{CL_CONTEXT_PLATFORM,8791449750192,NULL}];CL_DEVICE_TYPE_GPU;NULL;NULL;[CL_SUCCESS] )
+CL_SUCCESS = clReleaseContext ( 0x00000000003CCF10 )
+CL_SUCCESS = clGetPlatformInfo ( 0x000007FEEB3D4AB0;CL_PLATFORM_VENDOR;100;["Advanced Micro Devices, Inc."];NULL )
+0x0000000000427FF0 = clCreateContextFromType ( [{CL_CONTEXT_PLATFORM,8791449750192,NULL}];CL_DEVICE_TYPE_GPU;NULL;NULL;[CL_SUCCESS] )
+CL_SUCCESS = clReleaseContext ( 0x0000000000427FF0 )
+CL_SUCCESS = clGetDeviceIDs ( 0x000007FEEB3D4AB0;CL_DEVICE_TYPE_GPU;0;NULL;[1] )
+CL_SUCCESS = clGetPlatformInfo ( 0x000007FEEB3D4AB0;CL_PLATFORM_VENDOR;100;["Advanced Micro Devices, Inc."];NULL )
+0x00000000004280C0 = clCreateContextFromType ( [{CL_CONTEXT_PLATFORM,8791449750192,NULL}];CL_DEVICE_TYPE_GPU;NULL;NULL;[CL_SUCCESS] )
+CL_SUCCESS = clReleaseContext ( 0x00000000004280C0 )
+CL_SUCCESS = clGetPlatformInfo ( 0x000007FEEB3D4AB0;CL_PLATFORM_VENDOR;1024;["Advanced Micro Devices, Inc."];NULL )
+CL_SUCCESS = clGetDeviceIDs ( 0x000007FEEB3D4AB0;CL_DEVICE_TYPE_GPU;0;NULL;[1] )
+CL_SUCCESS = clGetDeviceIDs ( 0x000007FEEB3D4AB0;CL_DEVICE_TYPE_GPU;1;[0x00000000003F56A0];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NAME;1024;["Ellesmere"];NULL )
+0x0000000000428190 = clCreateContextFromType ( [{CL_CONTEXT_PLATFORM,8791449750192,NULL}];CL_DEVICE_TYPE_GPU;NULL;NULL;[CL_SUCCESS] )
+CL_SUCCESS = clGetContextInfo ( 0x0000000000428190;CL_CONTEXT_DEVICES;0;NULL;[8] )
+CL_SUCCESS = clGetContextInfo ( 0x0000000000428190;CL_CONTEXT_DEVICES;8;[0x00000000003F56A0];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_TYPE;8;[CL_DEVICE_TYPE_GPU];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_VENDOR_ID;4;[4098];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_COMPUTE_UNITS;4;[36];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS;4;[3];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_WORK_ITEM_SIZES;24;[1024,1024,1024];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_WORK_GROUP_SIZE;8;[256];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PREFERRED_VECTOR_WIDTH_CHAR;4;[4];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PREFERRED_VECTOR_WIDTH_SHORT;4;[2];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PREFERRED_VECTOR_WIDTH_INT;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PREFERRED_VECTOR_WIDTH_LONG;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PREFERRED_VECTOR_WIDTH_FLOAT;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PREFERRED_VECTOR_WIDTH_DOUBLE;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PREFERRED_VECTOR_WIDTH_HALF;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_CLOCK_FREQUENCY;4;[1000];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_ADDRESS_BITS;4;[64];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_MEM_ALLOC_SIZE;8;[4244635648];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_IMAGE_SUPPORT;4;[CL_TRUE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_READ_IMAGE_ARGS;4;[128];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_WRITE_IMAGE_ARGS;4;[64];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_IMAGE2D_MAX_WIDTH;8;[16384];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_IMAGE2D_MAX_HEIGHT;8;[16384];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_IMAGE3D_MAX_WIDTH;8;[2048];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_IMAGE3D_MAX_HEIGHT;8;[2048];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_IMAGE3D_MAX_DEPTH;8;[2048];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_SAMPLERS;4;[16];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_PARAMETER_SIZE;8;[1024];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MEM_BASE_ADDR_ALIGN;4;[2048];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MIN_DATA_TYPE_ALIGN_SIZE;4;[128];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_SINGLE_FP_CONFIG;8;[CL_FP_INF_NAN|CL_FP_ROUND_TO_NEAREST|CL_FP_ROUND_TO_ZERO|CL_FP_ROUND_TO_INF|CL_FP_FMA|CL_FP_CORRECTLY_ROUNDED_DIVIDE_SQRT];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_DOUBLE_FP_CONFIG;8;[CL_FP_DENORM|CL_FP_INF_NAN|CL_FP_ROUND_TO_NEAREST|CL_FP_ROUND_TO_ZERO|CL_FP_ROUND_TO_INF|CL_FP_FMA];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_GLOBAL_MEM_CACHE_TYPE;4;[CL_READ_WRITE_CACHE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_GLOBAL_MEM_CACHELINE_SIZE;4;[64];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_GLOBAL_MEM_CACHE_SIZE;8;[16384];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_GLOBAL_MEM_SIZE;8;[8589934592];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_CONSTANT_BUFFER_SIZE;8;[4244635648];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_MAX_CONSTANT_ARGS;4;[8];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_LOCAL_MEM_TYPE;4;[CL_LOCAL];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_LOCAL_MEM_SIZE;8;[32768];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_ERROR_CORRECTION_SUPPORT;4;[CL_FALSE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PROFILING_TIMER_RESOLUTION;8;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_ENDIAN_LITTLE;4;[CL_TRUE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_AVAILABLE;4;[CL_TRUE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_COMPILER_AVAILABLE;4;[CL_TRUE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_EXECUTION_CAPABILITIES;8;[CL_EXEC_KERNEL];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_QUEUE_ON_HOST_PROPERTIES;8;[CL_QUEUE_PROFILING_ENABLE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PLATFORM;8;[0x000007FEEB3D4AB0];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NAME;0;NULL;[10] )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NAME;10;["Ellesmere"];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_VENDOR;0;NULL;[29] )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_VENDOR;29;["Advanced Micro Devices, Inc."];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DRIVER_VERSION;0;NULL;[7] )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DRIVER_VERSION;7;["2527.7"];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PROFILE;0;NULL;[13] )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_PROFILE;13;["FULL_PROFILE"];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_VERSION;0;NULL;[28] )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_VERSION;28;["OpenCL 2.0 AMD-APP (2527.7)"];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_EXTENSIONS;0;NULL;[656] )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_EXTENSIONS;656;["cl_khr_fp64 cl_amd_fp64 cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_fp16 cl_khr_gl_sharing cl_khr_gl_depth_images cl_amd_device_attribute_query cl_amd_vec3 cl_amd_printf cl_amd_media_ops cl_amd_media_ops2 cl_amd_popcnt cl_khr_d3d10_sharing cl_khr_d3d11_sharing cl_khr_dx9_media_sharing cl_khr_image2d_from_buffer cl_khr_spir cl_khr_subgroups cl_khr_gl_event cl_khr_depth_images cl_khr_mipmap_image cl_khr_mipmap_image_writes cl_amd_liquid_flash "];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NATIVE_VECTOR_WIDTH_CHAR;4;[4];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NATIVE_VECTOR_WIDTH_SHORT;4;[2];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NATIVE_VECTOR_WIDTH_INT;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NATIVE_VECTOR_WIDTH_LONG;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NATIVE_VECTOR_WIDTH_FLOAT;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NATIVE_VECTOR_WIDTH_DOUBLE;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_NATIVE_VECTOR_WIDTH_HALF;4;[1];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_HOST_UNIFIED_MEMORY;4;[CL_FALSE];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_OPENCL_C_VERSION;0;NULL;[14] )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_OPENCL_C_VERSION;14;["OpenCL C 2.0 "];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_SVM_CAPABILITIES;8;[CL_DEVICE_SVM_COARSE_GRAIN_BUFFER|CL_DEVICE_SVM_FINE_GRAIN_BUFFER];NULL )
+CL_SUCCESS = clGetDeviceInfo ( 0x00000000003F56A0;CL_DEVICE_QUEUE_ON_DEVICE_MAX_SIZE;4;[8388608];NULL )
+0x0000000002F53FC0 = clCreateCommandQueue ( 0x0000000000428190;0x00000000003F56A0;CL_QUEUE_PROFILING_ENABLE;[CL_SUCCESS] )
+0x00000000070C9740 = clCreateBuffer ( 0x0000000000428190;CL_MEM_READ_ONLY|CL_MEM_USE_PERSISTENT_MEM_AMD;16384;NULL;[CL_SUCCESS] )
+0x000000000338F320 = clCreateBuffer ( 0x0000000000428190;CL_MEM_READ_ONLY|CL_MEM_USE_PERSISTENT_MEM_AMD;16384;NULL;[CL_SUCCESS] )
+0x000000000338F4A0 = clCreateBuffer ( 0x0000000000428190;CL_MEM_WRITE_ONLY|CL_MEM_ALLOC_HOST_PTR;16384;NULL;[CL_SUCCESS] )
+0x0000000007057F90 = clCreateProgramWithSource ( 0x0000000000428190;1;0x000000000013F4A8;0x000000000013F4B0;[CL_SUCCESS] )
+CL_SUCCESS = clBuildProgram ( 0x0000000007057F90;1;[0x00000000003F56A0];"";NULL;NULL )
+0x0000000002F3CD80 = clCreateKernel ( 0x0000000007057F90;"mmmKernel";[CL_SUCCESS] )
+CL_SUCCESS = clGetKernelWorkGroupInfo ( 0x0000000002F3CD80;0x00000000003F56A0;CL_KERNEL_WORK_GROUP_SIZE;8;[256];NULL )
+CL_SUCCESS = clGetKernelWorkGroupInfo ( 0x0000000002F3CD80;0x00000000003F56A0;CL_KERNEL_LOCAL_MEM_SIZE;8;[0];NULL )
+CL_SUCCESS = clGetKernelWorkGroupInfo ( 0x0000000002F3CD80;0x00000000003F56A0;CL_KERNEL_COMPILE_WORK_GROUP_SIZE;24;[{0,0,0}];NULL )
+0x00000000084D0000 = clEnqueueMapBuffer ( 0x0000000002F53FC0;0x00000000070C9740;CL_FALSE;CL_MAP_WRITE;0;16384;0;NULL;[0x00000000032E2EC0];[CL_SUCCESS] /* Device type = Discrete GPU;Buffer location = Host visible device memory;Map location = Host visible device memory;Zero copy = True */ )
+0x00000000084D4000 = clEnqueueMapBuffer ( 0x0000000002F53FC0;0x000000000338F320;CL_FALSE;CL_MAP_WRITE;0;16384;0;NULL;[0x00000000032E2AA0];[CL_SUCCESS] /* Device type = Discrete GPU;Buffer location = Host visible device memory;Map location = Host visible device memory;Zero copy = True */ )
+CL_SUCCESS = clFlush ( 0x0000000002F53FC0 )
+CL_SUCCESS = clWaitForEvents ( 1;[0x00000000032E2EC0] )
+CL_SUCCESS = clReleaseEvent ( 0x00000000032E2EC0 )
+CL_SUCCESS = clWaitForEvents ( 1;[0x00000000032E2AA0] )
+CL_SUCCESS = clReleaseEvent ( 0x00000000032E2AA0 )
+CL_SUCCESS = clEnqueueUnmapMemObject ( 0x0000000002F53FC0;0x00000000070C9740;0x00000000084D0000;0;NULL;[0x00000000032EFCE0] )
+CL_SUCCESS = clEnqueueUnmapMemObject ( 0x0000000002F53FC0;0x000000000338F320;0x00000000084D4000;0;NULL;[0x00000000032F05E0] )
+CL_SUCCESS = clFlush ( 0x0000000002F53FC0 )
+CL_SUCCESS = clWaitForEvents ( 1;[0x00000000032EFCE0] )
+CL_SUCCESS = clReleaseEvent ( 0x00000000032EFCE0 )
+CL_SUCCESS = clWaitForEvents ( 1;[0x00000000032F05E0] )
+CL_SUCCESS = clReleaseEvent ( 0x00000000032F05E0 )
+CL_SUCCESS = clSetKernelArg ( 0x0000000002F3CD80;0;8;[0x70C9740] )
+CL_SUCCESS = clSetKernelArg ( 0x0000000002F3CD80;1;8;[0x338F320] )
+CL_SUCCESS = clSetKernelArg ( 0x0000000002F3CD80;2;8;[0x338F4A0] )
+CL_SUCCESS = clSetKernelArg ( 0x0000000002F3CD80;3;4;0x000000000013F788 )
+CL_SUCCESS = clSetKernelArg ( 0x0000000002F3CD80;4;4;0x000000000013F798 )
+CL_SUCCESS = clEnqueueNDRangeKernel ( 0x0000000002F53FC0;0x0000000002F3CD80;2;NULL;[16,16];[8,8];0;NULL;[0x0000000007612730] )
+CL_SUCCESS = clFlush ( 0x0000000002F53FC0 )
+CL_SUCCESS = clGetEventInfo ( 0x0000000007612730;CL_EVENT_COMMAND_EXECUTION_STATUS;4;[CL_SUBMITTED];NULL /*563 consecutive calls*/ )
+CL_SUCCESS = clGetEventInfo ( 0x0000000007612730;CL_EVENT_COMMAND_EXECUTION_STATUS;4;[CL_RUNNING];NULL /*2 consecutive calls*/ )
+CL_SUCCESS = clGetEventInfo ( 0x0000000007612730;CL_EVENT_COMMAND_EXECUTION_STATUS;4;[CL_COMPLETE];NULL )
+CL_SUCCESS = clGetEventProfilingInfo ( 0x0000000007612730;CL_PROFILING_COMMAND_START;8;[436712767125768];NULL )
+CL_SUCCESS = clGetEventProfilingInfo ( 0x0000000007612730;CL_PROFILING_COMMAND_END;8;[436712767152488];NULL )
+CL_SUCCESS = clReleaseEvent ( 0x0000000007612730 )
+0x000000000337A000 = clEnqueueMapBuffer ( 0x0000000002F53FC0;0x000000000338F4A0;CL_FALSE;CL_MAP_READ;0;16384;0;NULL;[0x00000000032E2AA0];[CL_SUCCESS] /* Device type = Discrete GPU;Buffer location = Pinned host memory;Map location = Pinned host memory;Zero copy = True */ )
+CL_SUCCESS = clFlush ( 0x0000000002F53FC0 )
+CL_SUCCESS = clWaitForEvents ( 1;[0x00000000032E2AA0] )
+CL_SUCCESS = clReleaseEvent ( 0x00000000032E2AA0 )
+CL_SUCCESS = clEnqueueUnmapMemObject ( 0x0000000002F53FC0;0x000000000338F4A0;0x000000000337A000;0;NULL;[0x00000000032F05E0] )
+CL_SUCCESS = clFlush ( 0x0000000002F53FC0 )
+CL_SUCCESS = clWaitForEvents ( 1;[0x00000000032F05E0] )
+CL_SUCCESS = clReleaseEvent ( 0x00000000032F05E0 )
+CL_SUCCESS = clReleaseKernel ( 0x0000000002F3CD80 )
+CL_SUCCESS = clReleaseProgram ( 0x0000000007057F90 )
+CL_SUCCESS = clReleaseMemObject ( 0x00000000070C9740 )
+CL_SUCCESS = clReleaseMemObject ( 0x000000000338F320 )
+CL_SUCCESS = clReleaseMemObject ( 0x000000000338F4A0 )
+CL_SUCCESS = clReleaseCommandQueue ( 0x0000000002F53FC0 )
+CL_SUCCESS = clReleaseContext ( 0x0000000000428190 )
+=====ocl Timestamp Output=====
+31016
+142
+1    clGetPlatformInfo                            436712123016107      436712123019555      
+1    clGetPlatformInfo                            436712123029516      436712123029899      
+1    clGetPlatformInfo                            436712123469338      436712123470104      
+1    clGetPlatformInfo                            436712125550831      436712125551597      
+5    clCreateContextFromType                      436712125558493      436712125564623      
+7    clReleaseContext                             436712125569221      436712125572286      
+1    clGetPlatformInfo                            436712125574967      436712125575351      
+5    clCreateContextFromType                      436712125576117      436712125578032      
+7    clReleaseContext                             436712125578799      436712125579182      
+2    clGetDeviceIDs                               436712125579948      436712125580331      
+1    clGetPlatformInfo                            436712179722513      436712179724429      
+5    clCreateContextFromType                      436712179732474      436712179742819      
+7    clReleaseContext                             436712179746650      436712179748948      
+1    clGetPlatformInfo                            436712183436099      436712183438397      
+2    clGetDeviceIDs                               436712187615175      436712187618623      
+2    clGetDeviceIDs                               436712187629351      436712187633565      
+3    clGetDeviceInfo                              436712187635480      436712187637013      
+5    clCreateContextFromType                      436712190329583      436712190342992      
+8    clGetContextInfo                             436712190351037      436712190351420      
+8    clGetContextInfo                             436712190352570      436712190352570      
+3    clGetDeviceInfo                              436712190368661      436712190369427      
+3    clGetDeviceInfo                              436712190370577      436712190370960      
+3    clGetDeviceInfo                              436712190371343      436712190371343      
+3    clGetDeviceInfo                              436712190373258      436712190373641      
+3    clGetDeviceInfo                              436712190374408      436712190374408      
+3    clGetDeviceInfo                              436712190374791      436712190375174      
+3    clGetDeviceInfo                              436712190375557      436712190375940      
+3    clGetDeviceInfo                              436712190376323      436712190376323      
+3    clGetDeviceInfo                              436712190376706      436712190376706      
+3    clGetDeviceInfo                              436712190377090      436712190377090      
+3    clGetDeviceInfo                              436712190377473      436712190377473      
+3    clGetDeviceInfo                              436712190378239      436712190378239      
+3    clGetDeviceInfo                              436712190378622      436712190378622      
+3    clGetDeviceInfo                              436712190384369      436712190384369      
+3    clGetDeviceInfo                              436712190384752      436712190385135      
+3    clGetDeviceInfo                              436712190385518      436712190385518      
+3    clGetDeviceInfo                              436712190385901      436712190385901      
+3    clGetDeviceInfo                              436712190386284      436712190386668      
+3    clGetDeviceInfo                              436712190387051      436712190387051      
+3    clGetDeviceInfo                              436712190387434      436712190387434      
+3    clGetDeviceInfo                              436712190388200      436712190388200      
+3    clGetDeviceInfo                              436712190388583      436712190388583      
+3    clGetDeviceInfo                              436712190390499      436712190390499      
+3    clGetDeviceInfo                              436712190391265      436712190391265      
+3    clGetDeviceInfo                              436712190392031      436712190392031      
+3    clGetDeviceInfo                              436712190392797      436712190392797      
+3    clGetDeviceInfo                              436712190393181      436712190393181      
+3    clGetDeviceInfo                              436712190393564      436712190393564      
+3    clGetDeviceInfo                              436712190393947      436712190394330      
+3    clGetDeviceInfo                              436712190394713      436712190394713      
+3    clGetDeviceInfo                              436712190396246      436712190396246      
+3    clGetDeviceInfo                              436712190397012      436712190397012      
+3    clGetDeviceInfo                              436712190397395      436712190397395      
+3    clGetDeviceInfo                              436712190397778      436712190397778      
+3    clGetDeviceInfo                              436712190398161      436712190398544      
+3    clGetDeviceInfo                              436712190398927      436712190398927      
+3    clGetDeviceInfo                              436712190399311      436712190399694      
+3    clGetDeviceInfo                              436712190400077      436712190400077      
+3    clGetDeviceInfo                              436712190400460      436712190400843      
+3    clGetDeviceInfo                              436712190401226      436712190401226      
+3    clGetDeviceInfo                              436712190401609      436712190401992      
+3    clGetDeviceInfo                              436712190402376      436712190402376      
+3    clGetDeviceInfo                              436712190402759      436712190402759      
+3    clGetDeviceInfo                              436712190403142      436712190403525      
+3    clGetDeviceInfo                              436712190403908      436712190403908      
+3    clGetDeviceInfo                              436712190404291      436712190404291      
+3    clGetDeviceInfo                              436712190404674      436712190405057      
+3    clGetDeviceInfo                              436712190405440      436712190405824      
+3    clGetDeviceInfo                              436712190406207      436712190406207      
+3    clGetDeviceInfo                              436712190406973      436712190406973      
+3    clGetDeviceInfo                              436712190407356      436712190407356      
+3    clGetDeviceInfo                              436712190407739      436712190408122      
+3    clGetDeviceInfo                              436712190408505      436712190411570      
+3    clGetDeviceInfo                              436712190411954      436712190411954      
+3    clGetDeviceInfo                              436712190412337      436712190412720      
+3    clGetDeviceInfo                              436712190413103      436712190413103      
+3    clGetDeviceInfo                              436712190413869      436712190414252      
+3    clGetDeviceInfo                              436712190415785      436712190416168      
+3    clGetDeviceInfo                              436712190418467      436712190418850      
+3    clGetDeviceInfo                              436712190422298      436712190422298      
+3    clGetDeviceInfo                              436712190423064      436712190423064      
+3    clGetDeviceInfo                              436712190423447      436712190423447      
+3    clGetDeviceInfo                              436712190424213      436712190424213      
+3    clGetDeviceInfo                              436712190424596      436712190424596      
+3    clGetDeviceInfo                              436712190424980      436712190425363      
+3    clGetDeviceInfo                              436712190425746      436712190425746      
+3    clGetDeviceInfo                              436712190426512      436712190426512      
+3    clGetDeviceInfo                              436712190426895      436712190426895      
+3    clGetDeviceInfo                              436712190436473      436712190436856      
+3    clGetDeviceInfo                              436712190437239      436712190437623      
+9    clCreateCommandQueue                         436712190441454      436712555084658      
+13   clCreateBuffer                               436712555101515      436712555105346      
+13   clCreateBuffer                               436712555106496      436712555108028      
+13   clCreateBuffer                               436712555108411      436712555110710      
+27   clCreateProgramWithSource                    436712555285796      436712555321043      
+31   clBuildProgram                               436712555326790      436712753732166      
+35   clCreateKernel                               436712753763582      436712753765498      
+41   clGetKernelWorkGroupInfo                     436712758075218      436712758077134      
+41   clGetKernelWorkGroupInfo                     436712758081731      436712758082498      
+41   clGetKernelWorkGroupInfo                     436712758084796      436712758084796      
+63   clEnqueueMapBuffer                           436712758093991      436712765925354      4603    CL_COMMAND_MAP_BUFFER                   436712765756781      436712765928036      436712766155609      436712766155609      0         0x0000000002F53FC0       3         0x0000000000428190       Ellesmere                     16384               
+63   clEnqueueMapBuffer                           436712765942594      436712766176298      4603    CL_COMMAND_MAP_BUFFER                   436712766162889      436712766178597      436712766192007      436712766192007      0         0x0000000002F53FC0       3         0x0000000000428190       Ellesmere                     16384               
+50   clFlush                                      436712766184726      436712766189324      
+42   clWaitForEvents                              436712766191623      436712766192006      
+46   clReleaseEvent                               436712766193921      436712766194688      
+42   clWaitForEvents                              436712766228402      436712766230318      
+46   clReleaseEvent                               436712766232233      436712766233000      
+65   clEnqueueUnmapMemObject                      436712766267097      436712766283571      4605    CL_COMMAND_UNMAP_MEM_OBJECT             436712766270928      436712766286636      436712766302727      436712766302727      0         0x0000000002F53FC0       3         0x0000000000428190       Ellesmere                     
+65   clEnqueueUnmapMemObject                      436712766287403      436712766294299      4605    CL_COMMAND_UNMAP_MEM_OBJECT             436712766288169      436712766298130      436712766302344      436712766302344      0         0x0000000002F53FC0       3         0x0000000000428190       Ellesmere                     
+50   clFlush                                      436712766295831      436712766296981      
+42   clWaitForEvents                              436712766297747      436712766308857      
+46   clReleaseEvent                               436712766312689      436712766313838      
+42   clWaitForEvents                              436712766314987      436712766316520      
+46   clReleaseEvent                               436712766321117      436712766321117      
+39   clSetKernelArg                               436712766322650      436712766326864      
+39   clSetKernelArg                               436712766328396      436712766328396      
+39   clSetKernelArg                               436712766328780      436712766329163      
+39   clSetKernelArg                               436712766329546      436712766329546      
+39   clSetKernelArg                               436712766330312      436712766331078      
+66   clEnqueueNDRangeKernel                       436712766334143      436712766406553      4592    CL_COMMAND_NDRANGE_KERNEL               436712766394293      436712766409618      436712767126151      436712767152871      0         0x0000000002F53FC0       3         0x0000000000428190       Ellesmere                     0x0000000002F3CD80       mmmKernel      {16,16}     {8,8}        
+50   clFlush                                      436712766411150      436712766411917      
+43   clGetEventInfo                               436712766413066      436712767152105      
+43   clGetEventInfo                               436712767153255      436712767154021      
+43   clGetEventInfo                               436712767154404      436712767154787      
+49   clGetEventProfilingInfo                      436712767155170      436712767155553      
+49   clGetEventProfilingInfo                      436712767157469      436712767157469      
+46   clReleaseEvent                               436712767158235      436712767161300      
+63   clEnqueueMapBuffer                           436712767162449      436712767180839      4603    CL_COMMAND_MAP_BUFFER                   436712767168196      436712767184287      436712767191950      436712767191950      0         0x0000000002F53FC0       3         0x0000000000428190       Ellesmere                     16384               
+50   clFlush                                      436712767187735      436712767188502      
+42   clWaitForEvents                              436712767189268      436712767195781      
+46   clReleaseEvent                               436712767198463      436712767199229      
+65   clEnqueueUnmapMemObject                      436712767216086      436712767225281      4605    CL_COMMAND_UNMAP_MEM_OBJECT             436712767217236      436712767228346      436712767233710      436712767233710      0         0x0000000002F53FC0       3         0x0000000000428190       Ellesmere                     
+50   clFlush                                      436712767227963      436712767228346      
+42   clWaitForEvents                              436712767229112      436712767237924      
+46   clReleaseEvent                               436712767239457      436712767239840      
+38   clReleaseKernel                              436712797135485      436712797140849      
+30   clReleaseProgram                             436712797147362      436712797234714      
+18   clReleaseMemObject                           436712797236629      436712797241227      
+18   clReleaseMemObject                           436712797242759      436712797245441      
+18   clReleaseMemObject                           436712797246207      436712797278772      
+11   clReleaseCommandQueue                        436712797280305      436712800501581      
+7    clReleaseContext                             436712800512308      436712800515756      
